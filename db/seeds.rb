@@ -1587,3 +1587,6 @@ Word.create(english:"Written premium ",romaji:"keijō hoken-ryō ",japanese:"計
 Word.create(english:"Yearly renewable term",romaji:"maitoshi kōshin-shiki teiki hoken ",japanese:"毎年更新式定期保険", glossary: glossary)
 Word.create(english:"YOUNG",romaji:"jakunen-sō ",japanese:"若年層", glossary: glossary)
 Word.create(english:"Zero-based budgeting",romaji:"zerobēsu yosan hensei ",japanese:"ゼロベース予算編成", glossary: glossary)
+
+
+User.create(username: 'admin', email:'christopherpraveen@gmail.com', password:'password@123', password_confirmation: 'password@123')

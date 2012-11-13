@@ -1,0 +1,8 @@
+$("#results").html("");
+$("#search").val('');
+var content = '';
+<% @words.each do |word| %>
+	content += "<tr class=\"word\"><td><%= word.english %></td><td><%= word.romaji %></td><td><%= word.japanese %></tr>";
+<% end %>
+$("#results").append("<table><tr><th>English</th><th>Romaji</th><th>Japanese</th></tr>" + content + "</table>")
+$("#loading_img").hide();

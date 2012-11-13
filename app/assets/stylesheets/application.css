@@ -1,0 +1,174 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+*/
+body {
+	padding: 0px;
+	margin: 0px;
+	background-color: #f6f6f6;
+}
+
+.glossary-menu {
+	background: -moz-linear-gradient(top, #333 0%, #555 100%);
+	background-color: #333;
+	color: #999;
+	padding: 10px 20px;
+	border-bottom: 3px solid #dd0;
+}
+
+.glossary-menu a {
+	color: #09c;
+	text-decoration: none;
+	background-color: #444;
+	color: #939393;
+	border-radius: 3px;
+	display: inline-block;
+	background: -moz-linear-gradient(top, #444 0%, #555 100%);
+	padding: 8px 20px;
+	font: 400 13px/1.0 Arial;
+}
+
+.glossary-menu a:hover {
+	background-color: #555;
+	background: -moz-linear-gradient(top, #555 0%, #666 100%);
+	color: #ccc;
+	border-radius: 2px;
+}
+
+.glossary-menu a.selected {
+	background-color: #07a;
+	background: -moz-linear-gradient(bottom, #07a 0%, #08b 100%);
+	border-color: #f3f3f3;
+	color: #6ce;
+	border-radius: 2px;
+}
+
+#search-container {
+	padding: 10px;
+	background-color: #eee;
+	background: -moz-linear-gradient(bottom, #e9e9e9 0%, #f3f3f3 100%);
+	border-bottom: 1px solid #e3e3e3;
+	color: #ccc;
+	font: 400 16px/1.5 Arial;
+}
+
+#search-container #search {
+	width: 500px;
+	padding: 5px;
+	border: 1px solid #ddd;
+}
+
+#results table {
+	width: 100%;
+	padding: 0px;
+	padding: 0px;
+	margin: 0px;
+	border-collapse: collapse;
+}
+
+#results table th {
+	font: 400 14px/2.0 Arial;
+	background-color: #f3f3f3;
+	color: #999;
+}
+
+#results table td {
+	padding: 0px 10px;
+	margin: 0px;
+	border: 1px solid #e6e6e6;
+	width: 30%;
+}
+
+#results table tr {
+	border-bottom: 1px dotted #ddd;
+}
+
+.word {
+	font: 600 16px/2.0 Arial;
+	color: #555;
+	padding: 0px 10px;
+}
+
+.word i {
+	background-color: #ff0;
+}
+
+#loading_img {
+	display: none;
+}
+
+#logout_link {
+	margin-left: 100px;
+}
+
+#small-main-header {
+	background-color: #555;
+	color: #ccc;
+	padding: 5px 20px;
+	font: 100 14px/1.5 Arial;
+	border-bottom: 1px solid #666;
+}
+
+/* Login Screen Styles */
+#main-header {
+	background-color: #444;
+	color: #eee;
+	border-bottom: 1px solid #222;
+}
+
+#main-header #main-header-text {
+	margin: 0px;
+	padding: 75px 40px 50px;
+	font: 100 72px/1.0 "Segoe UI Light", Arial;
+
+}
+
+#signup-container {
+	color: #999;
+	text-align: center;
+	margin: 10px;
+	font: normal 14px/1.25 Arial;
+}
+
+#signup-container input[type="text"], #signup-container input[type="password"] {
+	margin: 3px 30px;
+	display: inline-block;
+	border: 1px solid #ccc;
+	padding: 5px;
+}
+
+#signup-container input[type="submit"] {
+	border: 1px solid #e3e3e3;
+	background-color: #eee;
+	color: #aaa;
+	border-radius: 2px;
+	font: bold 13px/1.0 Arial;
+	padding: 4px 20px;
+}
+
+#signup-container input[type="submit"]:hover {
+	background-color: #069;
+	color: #eee;
+	border-color: #058;
+}
+
+.error-messages {
+	background-color: #fdd;
+	margin: 0px auto;
+	padding: 10px;
+	color: #966;
+	width: 720px;
+	border-radius: 2px;
+	font: normal 13px/1.0 Arial;
+}
+
+

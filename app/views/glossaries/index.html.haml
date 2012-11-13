@@ -1,0 +1,11 @@
+#small-main-header
+	Japanese Glossary
+.glossary-menu
+	- @glossaries.each do |glossary|
+		= link_to glossary.glossary, glossary_url(glossary), :remote => true
+	= link_to 'Logout', logout_url, { :id => 'logout_link' }
+#search-container
+	Search &nbsp;&nbsp;
+	= text_field_tag 'search', '', { :autocomplete => 'off' }
+	= image_tag 'loading.gif', :id => 'loading_img'
+#results

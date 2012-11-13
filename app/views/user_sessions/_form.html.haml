@@ -1,0 +1,7 @@
+= form_for @user_session, :url => login_path do |f|
+  .label-element
+    = f.label :username
+    = f.text_field :username
+    = f.label :password
+    = f.password_field :password
+    = f.submit 'Login', :class => 'default-button'

@@ -1,0 +1,13 @@
+%table
+	%tr
+		%th English
+		%th Romaji
+		%th Japanese
+	- @words.each do |word|
+		%tr.word
+			%td= word.english
+			%td= word.romaji
+			%td= word.japanese
+	- if @words.size == 0
+		%tr
+			%td.word{:colspan => 3} No Results found.

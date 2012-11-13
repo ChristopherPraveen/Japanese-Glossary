@@ -1,0 +1,11 @@
+%div
+	#main-header
+		%h3#main-header-text
+			Japanese Glossary
+	#signup-container
+		.medium-title
+		= render 'form'
+	- if @user_session.errors.any?
+		.error-messages
+			- @user_session.errors.full_messages.each do |msg|
+				.error-message= msg

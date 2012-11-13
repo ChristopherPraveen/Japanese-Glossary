@@ -7,7 +7,6 @@ gem 'haml-rails'
 
 gem 'authlogic'
 # gem 'mysql2', '~> 0.3.11'
-gem 'sqlite3'
 gem 'pg'
 gem 'heroku'
 

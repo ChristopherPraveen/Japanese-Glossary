@@ -9,7 +9,6 @@ gem 'authlogic'
 # gem 'mysql2', '~> 0.3.11'
 gem 'pg'
 gem 'heroku'
-gem 'sqlite3'
 
 # Gems used only for assets and not required
 # in production environments by default.

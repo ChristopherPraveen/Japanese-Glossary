@@ -19,9 +19,15 @@ class UserSessionsController < ApplicationController
     @user_session = UserSession.new(params[:user_session])
 
     if @user_session.save
-      redirect_to glossaries_url
+      respond_to do |format|
+        format.html { redirect_to glossaries_url }
+        format.json { render :json => { :result => 'success' } }
+      end
     else
-      render action: "new"
+      respond_to do |format|
+        format.html { render action: "new" }
+        format.json { render :json => { :result => 'failed' } }
+      end
     end
   end
 

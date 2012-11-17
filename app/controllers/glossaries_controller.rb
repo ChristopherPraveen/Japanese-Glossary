@@ -16,7 +16,7 @@ class GlossariesController < ApplicationController
 	def search
 		@query = params[:query] || ''
 		response.headers['Content-type'] = 'application/json; charset=utf-8'
-		@words = Word.where("english like '%#{@query}%' or romaji like '%#{@query}%' or japanese like '%#{@query}%'")
+		@words = Word.includes(:glossary).where("english like '%#{@query}%' or romaji like '%#{@query}%' or japanese like '%#{@query}%'")
 		respond_to do |format|
 			format.html { render :layout => false }
 			format.json { render :json => { :words => @words } }

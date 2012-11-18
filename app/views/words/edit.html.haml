@@ -1,0 +1,11 @@
+%h2= @word.english
+%h2= @word.romaji
+%h2= @word.japanese
+= form_for(@word, :url => word_url(@word), :html => { :multipart => true }) do |f|
+	%h3 Sound File
+	- if @word.mp3_sound_id.nil?
+		= file_field_tag 'upload'
+		= f.submit 'Submit'
+	- else
+		File Exists
+		= link_to 'Delete', removesound_word_url(@word)

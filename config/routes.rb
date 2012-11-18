@@ -5,9 +5,14 @@ JapaneseGlossary::Application.routes.draw do
   get '/logout', :to => 'user_sessions#destroy'
   # The priority is based upon order of creation:
   # first created -> highest priority.
-
+  get 'words/sound'
   root :to => 'glossaries#index'
-  resources :words
+  resources :words do
+    member do
+      get 'removesound'
+    end
+  end
+  resources :mp3sounds, :only => ["show"]
   resources :glossaries do
     collection do
       get 'search'

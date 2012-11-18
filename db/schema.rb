@@ -11,10 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121107110643) do
+ActiveRecord::Schema.define(:version => 20121117170431) do
 
   create_table "glossaries", :force => true do |t|
     t.string   "glossary"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "mp3_sounds", :force => true do |t|
+    t.binary   "sound"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -33,9 +39,10 @@ ActiveRecord::Schema.define(:version => 20121107110643) do
     t.string   "english"
     t.string   "romaji"
     t.string   "japanese"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
     t.integer  "glossary_id"
+    t.integer  "mp3_sound_id"
   end
 
 end
